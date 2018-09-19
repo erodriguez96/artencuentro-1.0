@@ -45,21 +45,25 @@ a:hover{
     color: black;
 }
 
-.topnav input[type=text] {
-    width: 100px;
-    padding: 6px 15px 6px 15px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    -webkit-transition: width 0.4s;
-    transition: width 0.4s;
+#padre{
+    float: right;
+    height: 40px;
 }
 
-.topnav input[type=text]:focus {
+#myFilterList {
+    width: 100px;
+    padding: 6px 15px 6px 15px;
+
+    border: 2px solid #ccc;
+    font-size: 16px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+    box-sizing: border-box;
+    height: 46px;
+
+}
+
+#myFilterList:focus {
     width: 200px;
 }
 
@@ -98,16 +102,22 @@ h1 {
     color: darkslateblue;
 }
 
-#tabla {
+#tabla{
     font-family: "Arial Black", sans-serif;
     border-collapse: collapse;
     display: table;
-    margin: auto;
+    margin: 10px auto auto auto;
+
 }
 
-#tabla td, #tabla th {
+#tabla td, #tabla th{
     border: 2px solid black;
     padding: 10px;
+}
+
+#tabla img {
+    width: 300px;
+    height: 300px;
 }
 
 
@@ -115,15 +125,19 @@ h1 {
     background-color: darkgray;
 }
 
-#tabla th {
+#tabla th{
     text-align: center;
     background-color: inherit;
+}
+
+.formulario a{
+    width: 30px;
 }
 
 .formulario input[type=text], .formulario input[type=password]{
     font-family: "Arial", sans-serif;
     width: 50%;
-    margin-top: 5px;
+    margin-left: 5%;
     padding: 12px 2px;
     display: inline-block;
     border: 1px solid #8e9eab;
@@ -132,25 +146,23 @@ h1 {
     transition: 0.5s;
 }
 
-.formulario input[type="textarea"]{
-    font-family: "Arial", sans-serif;
-    width: 100%;
-    margin: auto;
-    padding: 10px 0px;
+.formulario input[type=file]{
+    width: 50%;
+    margin-left: 5%;
+    padding: 12px 2px;
 }
 
-
-input[type=text]:focus, input[type=password]:focus, input[type="textarea"]:focus{
+.formulario input[type=text]:focus, .formulario input[type=password]:focus, .formulario input[type="textarea"]:focus{
     border: 2px solid black;
 }
 
 .formulario input[type=submit]{
-    width: 25%;
+    width: 50%;
     background-color: whitesmoke;
     border: 1px solid black;
     padding: 16px 32px;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 4px 2px auto 50px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -159,3 +171,31 @@ input[type=text]:focus, input[type=password]:focus, input[type="textarea"]:focus
     background-color: black;
     color: white;
 }
+
+#form{
+    margin: 50px 50px 50px 25%;
+}
+
+#error {
+    margin: auto;
+    font-size: large;
+    color: red;
+}
+
+
+.meGusta{
+    background: url("../imagenes/megustavacio.png") no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.noMeGusta{
+    background: url("../imagenes/megustalleno.png") no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+

@@ -26,12 +26,14 @@ if($control == 0){
     header('Location: index.php');
 } else{
     echo '
-    <div class="formulario">
-        <form method="post"> <!-- action="'. 'htmlspecialchars($_SERVER[PHP_SELF]) '.'"-->
-            <input type=text name="user" value="" placeholder="username"><br>
-            <input type=password name="password" value="" placeholder="contraseña"><br>
-            <input type="submit" value="Enviar" name="enviar">
-        </form>
+    <div id="form">
+        <div class="formulario">
+            <form method="post"> <!-- action="'. 'htmlspecialchars($_SERVER[PHP_SELF]) '.'"-->
+                <input type=text name="user" value="" placeholder="username"><br>
+                <input type=password name="password" value="" placeholder="contraseña"><br>
+                <input type="submit" value="Enviar" name="enviar">
+            </form>
+        </div>
     </div>
 ';
 }

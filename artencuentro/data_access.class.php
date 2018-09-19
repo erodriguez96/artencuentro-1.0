@@ -22,7 +22,7 @@ class DB{
             // ¡Esto debería estar en presentation !
             echo '<h3>Error en la DB: ' . $e->getMessage() . '</h3>';
         }
-        return $false;
+        return false;
     }
     public static function user_exists($usuario,$pass, &$res){
         $db = self::get();

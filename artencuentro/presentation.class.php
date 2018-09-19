@@ -11,6 +11,7 @@ class View
         <meta charset=\"utf-8\">
         <link rel=\"stylesheet\" type=\"text/css\" href=\"estilos/estilos.css\">
         <script src=\"scripts.js\"></script>
+        <script src=\"jquery-3.3.1.min.js\"></script>
         <title>$title</title>
         </head>
         <body>";
@@ -18,8 +19,7 @@ class View
         echo $html;
     }
 
-    public static function topnav()
-    {
+    public static function topnav(){
         $log = "";
         $user = "";
         $func = "";
@@ -36,7 +36,7 @@ class View
             $idautor = User::getLoggedUser()['id'];
 
             $array = $_SESSION['user'];
-            $tipo=$array['tipo'];
+            $tipo = $array['tipo'];
 
             switch ($array['tipo']) {
                 case 1: //admin
@@ -62,21 +62,19 @@ class View
 
         <div class="topnav">
             <a href="visitante.php"><b>Ver nuestros trabajos</b></a>
-            <div style="float: right">
+            <div id="padre">
                 <form method="post" action="visitante.php">
-                    <input type="text" placeholder="Search.." name="busqueda">
-                    <input type="submit" value="buscar" name="buscar">
-                        '.$aux1.'
-                        '.$aux2.'
-                        '.$func.'
-                        '.$log.'
+                    <div id="barra"> 
+                        <input type="text" id="myFilterList" name="buscar" placeholder="Search.." onkeyup="myFilterList()">
+                            '.$aux1.'
+                            '.$aux2.'
+                            '.$func.'
+                            '.$log.'
+                    </div>
                 </form>
             </div>
         </div>
         ';
-//        <div class="dropdown" style="float: left">
-//            <button class="dropbtn">'.$user.'</button>
-//        h<div class="dropdown-content">
     }
 
     public static function navigation()

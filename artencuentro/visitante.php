@@ -8,7 +8,7 @@ View::topnav();
 if(isset($_POST['buscar'])){
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $busqueda = User::test_input($_POST["busqueda"]);
+        $busqueda = User::test_input($_POST["buscar"]);
     }
 
     $query = DB::execute_sql(" SELECT obras.idautor,obras.id,usuarios.nombre,obras.titulo,obras.fecha,obras.tipo,obras.imagen
